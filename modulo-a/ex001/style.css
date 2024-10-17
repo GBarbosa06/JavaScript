@@ -5,23 +5,32 @@
 .tema-claro
 {
     --fundo: #ffffff;
-    --borda: #0f0f0f;
     --corFonteBotao: #000000;
     --fundoBotao: #494949;
+
     
 }
 .tema-escuro
 {
     --fundo: #696969;
-    --borda: #9c9c9c;
     --corFonteBotao: #ffffff;
     --fundoBotao: #b3b3b3;
+}
+.btn:hover
+{
+    background-color: #777777;
+    color: white;
 }
 
 *
 {
     padding: 0;
     margin: 0;
+    transition: all 0.15s;
+}
+body
+{
+    background-color: var(--fundo);
 }
 h1
 {
@@ -35,6 +44,7 @@ ul, li, .butao
     margin: 25px;
     text-align: center;
     list-style: none;
+    color: var(--corFonteBotao);
 }
 .btn
 {
