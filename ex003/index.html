@@ -15,15 +15,20 @@
 </head>
 <body>
     <h1>Lorem ipsum</h1>
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
     
 
 
     <script>
-        var nome = window.prompt("Digite seu nome: ");
+        let nome = window.prompt("Digite seu nome: ");
         window.alert(`Olá ${nome}`);
         //window.alert("Ola " + nome);
-        document.write("Ola " + nome)
-        
+
+        window.document.write("Ola " + nome);
+
+        let p1 = window.document.getElementsByTagName('p')[0];
+        window.document.write('<br/>' + p1.innerText)
         
     </script>
 
