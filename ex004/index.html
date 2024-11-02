@@ -3,23 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Funções</title>
+
+    <style>
+        h1, p{
+            text-align: center;
+        }
+        body{
+            position: relative;
+        }
+        #btn{
+            height: 250px;
+            width: 250px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 50%);
+            background-color: aqua;            
+        }
+        #btn>p{
+            padding-top: 40%;
+        }
+    </style>
+
 </head>
 <body>
     <h1>Estudos de JavaScript</h1>
-    <p>Primeiro, entre com seu nome</p>
-    <form method="post" action="nome.js">
-        <input id="testando123" type="text">
-        <input type="submit" value="enviar">
-    </form>
+    <p>Hello world!</p>
+    <div id="btn" onclick="alerta()">
+        Botão
+    </div>
 
     
 
 
     <script>
-        let nome = window.document.getElementsByTagName('input')[0];
-        let n = window.document.write(nome);
-        window.document.getElementById('btn').onclick.write(nome);
+        function alerta()
+        {
+            var texto = window.document.getElementById('btn');
+            texto.innerText = 'Interagido';
+        }
     </script>
 </body>
 </html>
