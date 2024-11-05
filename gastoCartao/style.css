@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+
+@media screen and (min-width:600px) {
+    div#centro{
+        
+        width: 55vw;
+        height: 500px;
+
+    }
+    div#imagem{
+        width: 55vw;       
+    }
+}
