@@ -44,7 +44,15 @@
             diasUteis = 30 - finsDeSemana - diasFeriado + diasUteisProximoMes;
             gastoCartao = diasUteis * 15.20;
             let res = window.document.getElementById('resultado');
-            res.innerHTML = `Você precisa gastar RS${gastoCartao} esse mês`
+            if(gastoCartao>0)
+            {
+                res.innerHTML = `Você precisa gastar RS${gastoCartao} esse mês`
+            }
+            else
+            {
+                res.innerHTML = `Digite um valor menor que 28`
+            }
+            
         }
         
 
