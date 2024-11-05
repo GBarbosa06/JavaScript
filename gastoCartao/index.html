@@ -7,15 +7,27 @@
     <style>
         *{
             font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+
         }
+        div#centro{
+            background-color: rgba(173, 173, 173, 0.301);
+            border-radius: 10px;
+            padding: 50px;
+            width: 50vw;
+            margin: 0vw 25vw;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Calculadora de gastos com o cartão UTB</h1>
-    <p>Quantos feriados tem esse mês?</p>
-    <input type="text" name="feriados" id="feriados">
-    <input type="button" value="Calcular" onclick="cartao()">
-    <div id="resultado"></div>
+    <div id="centro">
+        <h1>Calculadora de gastos com o cartão UTB</h1>
+        <p>Quantos feriados tem esse mês?</p>
+        <input type="text" name="feriados" id="feriados">
+        <input type="button" value="Calcular" onclick="cartao()">
+        <div id="resultado"></div>
+    </div>
 
     <script>
 
