@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gasto Cartão UTB</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de gastos com o cartão UTB</h1>
+    <p>Quantos feriados tem esse mês?</p>
+    <input type="text" name="feriados" id="feriados">
+    <input type="button" value="Calcular" onclick="cartao()">
+    <div id="resultado"></div>
+
+    <script>
+
+        function cartao()
+        {
+            let diasUteis, feriado, finsDeSemana = 8, diasUteisProximoMes = 5, gastoCartao;
+            feriado = window.document.getElementById('feriados');
+            let diasFeriado = Number(feriado.value)
+
+            diasUteis = 30 - finsDeSemana - diasFeriado + diasUteisProximoMes;
+            gastoCartao = diasUteis * 15.20;
+            let res = window.document.getElementById('resultado');
+            res.innerHTML = `Você precisa gastar RS${gastoCartao} esse mês`
+        }
+        
+
+    </script>
+</body>
+</html>
