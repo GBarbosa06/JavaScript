@@ -11,7 +11,7 @@
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
         width: 70vw;
-        height: 550px;
+        height: 560px;
 
     }
     div#imagem{
@@ -29,5 +29,15 @@
         display: flex;
         justify-content: center;
     }
-
+    p#questao{
+        font-size: 1.2em;
+    }
+    p.legenda{
+        height: 5px;
+        font-size: .75em;
+        color: rgb(80, 80, 80);
+    }
+    p#bottom{
+        margin-bottom: 20px;
+    }
 }

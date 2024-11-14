@@ -16,17 +16,20 @@
         <div id="imagem"></div>
         <div id="info">
             <h1>Calculadora de gastos com o cartão UTB</h1>
-            <p>Quantos feriados tem esse mês?</p>
-            <form>
-                <input type="text" name="feriados" id="feriados" onkeydown="cartao()">
-                <input type="button" value="Calcular" onclick="cartao()" >
-            </form>
-            <div id="resultado"></div>
+            
+
+                <p id="questao">Quantos feriados tem esse mês?</p>
+                        <p class="legenda" id="top">calculos feitos considerando ida e volta, R$15,20 por dia</p>
+                        <p class="legenda" id="bottom">digite 0 para contabilizar todos os dias úteis</p>
+                
+                    <input type="text" name="feriados" id="feriados" onkeydown="cartao()">
+                <div id="resultado"></div>
+
         </div>
     </div>
 
     <script>
-        window.alert('Atualização 1.0.7.3 !!!')
+        window.alert('Atualização 1.0.8 !!!')
         function cartao()
         {
             let diasUteis, feriado, finsDeSemana = 8, diasUteisProximoMes = 5, gastoCartao;
