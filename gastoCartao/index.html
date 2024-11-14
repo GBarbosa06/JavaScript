@@ -17,14 +17,16 @@
         <div id="info">
             <h1>Calculadora de gastos com o cartão UTB</h1>
             <p>Quantos feriados tem esse mês?</p>
-            <input type="text" name="feriados" id="feriados">
-            <input type="button" value="Calcular" onclick="cartao()">
+            <form>
+                <input type="text" name="feriados" id="feriados" onkeydown="cartao()">
+                <input type="button" value="Calcular" onclick="cartao()" >
+            </form>
             <div id="resultado"></div>
         </div>
     </div>
 
     <script>
-
+        window.alert('Atualização 1.0.7.3 !!!')
         function cartao()
         {
             let diasUteis, feriado, finsDeSemana = 8, diasUteisProximoMes = 5, gastoCartao;
