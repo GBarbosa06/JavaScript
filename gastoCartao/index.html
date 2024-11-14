@@ -22,14 +22,14 @@
                         <p class="legenda" id="top">calculos feitos considerando ida e volta, R$15,20 por dia</p>
                         <p class="legenda" id="bottom">digite 0 para contabilizar todos os dias úteis</p>
                 
-                    <input type="text" name="feriados" id="feriados" onkeydown="cartao()">
+                    <input type="text" name="feriados" id="feriados" onkeydown="cartao()" onkeyup="cartao()">
                 <div id="resultado"></div>
 
         </div>
     </div>
 
     <script>
-        window.alert('Atualização 1.0.8.1 correção de bugs !!!')
+        window.alert('Atualização 1.0.8.2 correção de bugs !!!')
         function cartao()
         {
             let diasUteis, feriado, finsDeSemana = 8, diasUteisProximoMes = 5, gastoCartao;
