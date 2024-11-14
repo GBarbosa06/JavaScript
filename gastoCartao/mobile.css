@@ -40,8 +40,8 @@
     p#bottom{
         margin-bottom: 20px;
     }
-}
-@media screen and (max-width:800px) {
+
+
     p#top{
         margin-bottom: 2em;
     }
