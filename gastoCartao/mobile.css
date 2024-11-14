@@ -43,6 +43,6 @@
 }
 @media screen and (max-width:800px) {
     p#top{
-        margin: 5px;
+        margin-bottom: 10px;
     }
 }
