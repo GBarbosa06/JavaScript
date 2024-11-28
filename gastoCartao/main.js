@@ -7,12 +7,12 @@ function carregar()
     let data = new Date();
     let hora = data.getHours();
     
-    if(hora >= 6 && hora <= 12)
+    if(hora >= 6 && hora < 12)
     {
         window.document.body.style.backgroundColor = '#E3A32D'
         boasVindas.innerHTML = "Bom dia!"
     }
-    else if(hora >= 13 && hora <= 18)
+    else if(hora >= 12 && hora < 18)
     {
         window.document.body.style.backgroundColor = '#FCBEA4'
         boasVindas.innerHTML = "Boa tarde!"
