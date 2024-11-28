@@ -33,14 +33,13 @@
         font-size: 1.2em;
     }
     p.legenda{
-        height: 5px;
+        height: .01em;
         font-size: .75em;
         color: rgb(80, 80, 80);
     }
-    p#bottom{
-        margin-bottom: 20px;
+    #feriados{
+        margin-bottom: 5px;
     }
-
 
     p#top{
         margin-bottom: 2em;

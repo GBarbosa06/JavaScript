@@ -9,51 +9,25 @@
     <link rel="stylesheet" href="style.css">
     
     
+    
  
 </head>
-<body>
+<body onload="carregar()">
     <div id="centro">
         <div id="imagem"></div>
         <div id="info">
-            <h1>Calculadora de gastos com o cartão UTB</h1>
+            <h3 id="recepcao">Olá</h3>
+            <h3>Calculadora de gastos com o cartão UTB</h3>
             
 
                 <p id="questao">Quantos feriados tem esse mês?</p>
                         <p class="legenda" id="top">calculos feitos considerando ida e volta, R$15,20 por dia</p>
-                        <p class="legenda" id="bottom">digite 0 para contabilizar todos os dias úteis</p>
                 
                     <input type="text" name="feriados" id="feriados" onkeydown="cartao()" onkeyup="cartao()">
-                <div id="resultado"></div>
-
+                <div id="resultado">Você precisa gastar RS410.40 esse mês</div>
         </div>
     </div>
 
-    <script>
-        window.alert('Atualização 1.0.8.4 correção de bugs !!!')
-       
-
-        function cartao()
-        {
-            let diasUteis, feriado, finsDeSemana = 8, diasUteisProximoMes = 5, gastoCartao;
-            feriado = window.document.getElementById('feriados');
-            let diasFeriado = Number(feriado.value)
-
-            diasUteis = 30 - finsDeSemana - diasFeriado + diasUteisProximoMes;
-            gastoCartao = diasUteis * 15.20;
-            let res = window.document.getElementById('resultado');
-            if(diasFeriado<28)
-            {
-                res.innerHTML = `Você precisa gastar RS${gastoCartao} esse mês`
-            }
-            else
-            {
-                res.innerHTML = `Digite um valor menor que 28`
-            }
-            
-            
-        }
-        
-
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
