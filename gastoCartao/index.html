@@ -21,19 +21,20 @@
             
 
                 <form id="informacoes">
-                    <p class="questao">Quantos feriados tem esse mês?</p>                    
-                        <input type="text" name="feriados" id="feriados" class="caixa" onkeydown="cartao()" onkeyup="cartao()">
+                    <p class="questao">Qual o saldo atual?</p> <!-- saldo atual -->
+                    <input type="number" name="saldo" id="saldo" style="width: 60px;" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
 
-                    <p class="questao">Qual o valor da passagem?</p>
+                    <p class="questao">Quantos feriados tem esse mês?</p>   <!-- feriados do mes -->              
+                        <input type="number" name="feriados" id="feriados" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
+
+                    <p class="questao">Qual o valor da passagem?</p> <!-- escolha de valores -->
                         <input type="radio" name="passagem" value="2.7" onclick="cartao()">
                         <p class="opcao">R$2,70</p>
-                    
                         <input type="radio" name="passagem" value="3.8" onclick="cartao()">
                         <p class="opcao">R$3,80</p>
-                        <br class="divisorMobile">
+                        <br class="divisorMobile"> <!-- break apenas para o mobile -->
                         <input type="radio" name="passagem" value="5.5" onclick="cartao()">
-                        <p class="opcao">R$5,50</p>
-                    
+                        <p class="opcao">R$5,50</p>                    
                         <input type="radio" name="passagem" value="7.6" onclick="cartao()">
                         <p class="opcao">R$7,60</p>
 

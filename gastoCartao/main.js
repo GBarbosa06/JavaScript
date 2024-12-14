@@ -9,17 +9,17 @@ function carregar()
     
     if(hora >= 6 && hora < 12)
     {
-        window.document.body.style.backgroundColor = '#E3A32D'
+        /* window.document.body.style.backgroundColor = '#E3A32D' */
         boasVindas.innerHTML = "Bom dia!"
     }
     else if(hora >= 12 && hora < 18)
     {
-        window.document.body.style.backgroundColor = '#FCBEA4'
+        /* window.document.body.style.backgroundColor = '#FCBEA4' */
         boasVindas.innerHTML = "Boa tarde!"
     }
     else
     {
-        window.document.body.style.backgroundColor = '#AE41E8'
+        /* window.document.body.style.background = '#9113d4' */
         boasVindas.innerHTML = "Boa noite!"
     }
     
@@ -31,7 +31,8 @@ function cartao()
     feriado = window.document.getElementById('feriados');
     let diasFeriado = Number(feriado.value);
 
-    
+    let saldoAtual = window.document.getElementById('saldo')
+    let saldo = saldoAtual.value
 
     let res = window.document.getElementById('resultado'); //div do resultado final
 
@@ -57,6 +58,7 @@ function cartao()
 
              
     }
+    gastoCartao = gastoCartao - Number(saldo)
     res.innerHTML = `Você precisa gastar RS${gastoCartao.toFixed(2)} esse mês`  
 
 
