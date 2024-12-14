@@ -1,4 +1,4 @@
-window.alert('Atualização 1.2.0 !!! Melhoria de usabilidade');
+window.alert('Atualização 1.3.0 !!! Melhoria de usabilidade');
 
 
 function carregar()
@@ -24,10 +24,33 @@ function carregar()
     }
     
 }
+diasUteis()
+{
+    
+}
 
 function cartao()
 {
-    let diasUteis, feriado, finsDeSemana = 8, diasUteisProximoMes = 5, gastoCartao;
+    //inicio do calculo de dias úteis
+    const data = new Date();
+    const ano = data.getFullYear();
+    const mes = data.getMonth();
+
+    const ultimoDia = new Date(ano, mes + 1, 0).getDate(); //data correspondente ao último dia do mês atual
+
+    let diasUteis = 0;
+
+    for(let dia = 1; dia <= ultimoDia; dia++)
+    {
+        let dataAtual = new Date(ano, mes, dia);
+        if(dataAtual.getDay() > 0 && dataAtual.getDay() < 6) //verifica se é um dia da semana e incrementa no contador
+        {
+            diasUteis++;
+        }
+    }
+
+
+    let feriado, gastoCartao;
     feriado = window.document.getElementById('feriados');
     let diasFeriado = Number(feriado.value);
 
@@ -36,11 +59,12 @@ function cartao()
 
     let res = window.document.getElementById('resultado'); //div do resultado final
 
-    diasUteis = 30 - finsDeSemana - diasFeriado + diasUteisProximoMes;
+    diasUteis = diasUteis - diasFeriado;
 
     let valorPassagem = document.querySelector('input[name="passagem"]:checked');
     let usos = document.querySelector('input[name="usos"]:checked');
 
+    
 
     if(valorPassagem.value == "outro")
     {
@@ -59,7 +83,7 @@ function cartao()
              
     }
     gastoCartao = gastoCartao - Number(saldo)
-    res.innerHTML = `Você precisa gastar RS${gastoCartao.toFixed(2)} esse mês`  
+    res.innerHTML = `Você vai usar RS${gastoCartao.toFixed(2)} com transporte no mes ${mes+1}`  
 
 
     if(diasFeriado>28) //verificação se os dias de feriados passam de 28
@@ -71,6 +95,8 @@ function cartao()
     
     
 }
+
+
 
 function outro()
 {
