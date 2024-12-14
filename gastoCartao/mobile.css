@@ -29,8 +29,13 @@
         display: flex;
         justify-content: center;
     }
-    p#questao{
-        font-size: 1.2em;
+    p.questao{
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
+    p.opcao{
+        display: inline;
+        font-size: .8em;
     }
     p.legenda{
         height: 1em;
@@ -43,5 +48,15 @@
 
     p#top{
         margin-bottom: 2em;
+    }
+    .divisorMobile{
+        display: block;
+    }
+
+    #personalizado{
+        display: none;
+    }
+    input.caixa{
+        width: 40px;
     }
 }

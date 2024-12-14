@@ -1,4 +1,4 @@
-window.alert('Atualização 1.1.0 !!! Melhoria de usabilidade');
+window.alert('Atualização 1.2.0 !!! Melhoria de usabilidade');
 
 
 function carregar()
@@ -29,17 +29,49 @@ function cartao()
 {
     let diasUteis, feriado, finsDeSemana = 8, diasUteisProximoMes = 5, gastoCartao;
     feriado = window.document.getElementById('feriados');
-    let diasFeriado = Number(feriado.value)
+    let diasFeriado = Number(feriado.value);
+
+    
+
+    let res = window.document.getElementById('resultado'); //div do resultado final
 
     diasUteis = 30 - finsDeSemana - diasFeriado + diasUteisProximoMes;
-    gastoCartao = diasUteis * 15.20;
-    let res = window.document.getElementById('resultado');
-    if(diasFeriado<28)
+
+    let valorPassagem = document.querySelector('input[name="passagem"]:checked');
+    let usos = document.querySelector('input[name="usos"]:checked');
+
+
+    if(valorPassagem.value == "outro")
     {
-        res.innerHTML = `Você precisa gastar RS${gastoCartao.toFixed(2)} esse mês`
+        let reais = document.getElementById('reais');
+        let centavos = document.getElementById('centavos');
+
+        let valorFinal = Number(reais.value) + (Number(centavos.value) / 100);
+
+        gastoCartao = diasUteis * (valorFinal * usos.value);
+        
     }
     else
     {
-        res.innerHTML = `Digite um valor menor que 28`
+        gastoCartao = diasUteis * (valorPassagem.value * usos.value);
+
+             
     }
+    res.innerHTML = `Você precisa gastar RS${gastoCartao.toFixed(2)} esse mês`  
+
+
+    if(diasFeriado>28) //verificação se os dias de feriados passam de 28
+        {
+            res.innerHTML = `Campo de feriados incorreto`
+        }
+
+
+    
+    
+}
+
+function outro()
+{
+    let caixaPersonalizada = window.document.getElementById('personalizado');
+    caixaPersonalizada.style.display = 'inline'
 }

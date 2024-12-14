@@ -17,14 +17,51 @@
         <div id="imagem"></div>
         <div id="info">
             <h3 id="recepcao">Olá</h3>
-            <h3>Calculadora de gastos com o cartão UTB</h3>
+            <h3>Calculadora de gastos com o cartão do ônibus</h3>
             
 
-                <p id="questao">Quantos feriados tem esse mês?</p>
-                        <p class="legenda" id="top">calculos feitos considerando ida e volta, R$15,20 por dia</p>
-                
-                    <input type="text" name="feriados" id="feriados" onkeydown="cartao()" onkeyup="cartao()">
-                <div id="resultado">Você precisa gastar RS410.40 esse mês</div>
+                <form id="informacoes">
+                    <p class="questao">Quantos feriados tem esse mês?</p>                    
+                        <input type="text" name="feriados" id="feriados" class="caixa" onkeydown="cartao()" onkeyup="cartao()">
+
+                    <p class="questao">Qual o valor da passagem?</p>
+                        <input type="radio" name="passagem" value="2.7" onclick="cartao()">
+                        <p class="opcao">R$2,70</p>
+                    
+                        <input type="radio" name="passagem" value="3.8" onclick="cartao()">
+                        <p class="opcao">R$3,80</p>
+                        <br class="divisorMobile">
+                        <input type="radio" name="passagem" value="5.5" onclick="cartao()">
+                        <p class="opcao">R$5,50</p>
+                    
+                        <input type="radio" name="passagem" value="7.6" onclick="cartao()">
+                        <p class="opcao">R$7,60</p>
+
+                        <br>
+
+                        <input type="radio" name="passagem" value="outro" onclick="outro()">
+                        <p class="opcao">Outro</p>
+                        <div id="personalizado">
+                            R$
+                            <input type="number" name="caixa" id="reais" class="caixa">
+                            ,
+                            <input type="number" name="caixa" id="centavos" class="caixa">
+                        </div>
+                    
+                    <p class="questao">Quantos usos diários?</p> 
+                        <input type="radio" name="usos" value="1" onclick="cartao()">
+                        <p class="opcao">1</p>
+                        <input type="radio" name="usos" value="2" onclick="cartao()">
+                        <p class="opcao">2</p>
+                        <input type="radio" name="usos" value="3" onclick="cartao()">
+                        <p class="opcao">3</p>
+                        <input type="radio" name="usos" value="4" onclick="cartao()">
+                        <p class="opcao">4</p>
+                        
+                </form>
+                <br>
+                <div id="resultado">Dados insuficientes</div>
+            
         </div>
     </div>
 

@@ -5,10 +5,13 @@
     div#centro{
         
         width: 55vw;
-        height: 540px;
+        height: 740px;
 
     }
     div#imagem{
         width: 55vw;       
+    }
+    .divisorMobile{
+        display: none;
     }
 }
