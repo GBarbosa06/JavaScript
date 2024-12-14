@@ -18,14 +18,25 @@
         <div id="info">
             <h3 id="recepcao">Olá</h3>
             <h3>Calculadora mensal de gastos com o cartão do ônibus</h3>
+            <p class="legenda">campos em branco serão considerados como 0</p>
             
+            
+            <form id="informacoes">
 
-                <form id="informacoes">
+                <input type="radio" name="escolhaMes" value="esse" onclick="cartao()">
+                <p class="opcao">Para esse mês</p>
+                <br class="divisorMobile">
+                <input type="radio" name="escolhaMes" value="proximo" onclick="cartao()">
+                <p class="opcao">Para o proximo mês</p>
+
                     <p class="questao">Qual o saldo atual?</p> <!-- saldo atual -->
                     <input type="number" name="saldo" id="saldo" style="width: 60px;" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
 
-                    <p class="questao">Quantos feriados tem esse mês?</p>   <!-- feriados do mes -->              
+                    <p class="questao">Quantos feriados em dias úteis tem esse mês?</p>   <!-- feriados do mes -->              
                         <input type="number" name="feriados" id="feriados" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
+
+                    <p class="questao">Quer adicionar dias úteis no cálculo?</p>
+                        <input type="number" name="adicaoDias" id="adicaoDias" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
 
                     <p class="questao">Qual o valor da passagem?</p> <!-- escolha de valores -->
                         <input type="radio" name="passagem" value="2.7" onclick="cartao()">
@@ -58,6 +69,8 @@
                         <p class="opcao">3</p>
                         <input type="radio" name="usos" value="4" onclick="cartao()">
                         <p class="opcao">4</p>
+                    
+                    
                         
                 </form>
                 <br>

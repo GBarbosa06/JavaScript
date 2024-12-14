@@ -9,14 +9,14 @@
     }
 
     body{
-        background-image: linear-gradient(to bottom, #160127b0, rgba(160, 43, 255, 0.39));
+        background-image: linear-gradient(to bottom, #000000b0, rgba(153, 0, 255, 0.5));
         background-attachment: fixed;
     }
     div#centro{
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
         width: 70vw;
-        height: 730px;
+        height: 950px;
 
     }
     div#imagem{

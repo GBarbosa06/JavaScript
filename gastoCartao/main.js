@@ -31,25 +31,58 @@ diasUteis()
 
 function cartao()
 {
-    //inicio do calculo de dias úteis
-    const data = new Date();
-    const ano = data.getFullYear();
-    const mes = data.getMonth();
+    let escolhaMes = window.document.querySelector('input[name="escolhaMes"]:checked') //pergunta se o calculo será feito para o mês atual ou o proximo
+    
 
-    const ultimoDia = new Date(ano, mes + 1, 0).getDate(); //data correspondente ao último dia do mês atual
+    //inicio do calculo de dias úteis
+    let data = new Date();
+    let ano = data.getFullYear();
+    let mes = data.getMonth();
+
+    if(escolhaMes.value == "proximo")
+    {
+        mes++;
+        ano++
+        if(mes >= 11)
+        {
+            mes = 0;
+        }
+    }
+    
+
+    let ultimoDia = new Date(ano, mes + 1, 0).getDate(); //data correspondente ao último dia do mês atual
 
     let diasUteis = 0;
 
-    for(let dia = 1; dia <= ultimoDia; dia++)
+    if(escolhaMes.value == "proximo")
     {
-        let dataAtual = new Date(ano, mes, dia);
-        if(dataAtual.getDay() > 0 && dataAtual.getDay() < 6) //verifica se é um dia da semana e incrementa no contador
-        {
-            diasUteis++;
-        }
+        for(let dia = 1; dia <= ultimoDia; dia++)
+            {
+                let dataAtual = new Date(ano, mes, dia);
+                if(dataAtual.getDay() > 0 && dataAtual.getDay() < 6) //verifica se é um dia da semana e incrementa no contador
+                {
+                    diasUteis++;
+                }
+            }
     }
+    else
+    {
+        for(let dia = data.getDate(); dia <= ultimoDia; dia++)
+            {
+                let dataAtual = new Date(ano, mes, dia);
+                if(dataAtual.getDay() > 0 && dataAtual.getDay() < 6)
+                {
+                    diasUteis++;
+                }
+            }
+    }
+    
 
 
+
+    let adicaoDias = Number((document.getElementById('adicaoDias')).value);
+    diasUteis += adicaoDias;
+    
     let feriado, gastoCartao;
     feriado = window.document.getElementById('feriados');
     let diasFeriado = Number(feriado.value);
@@ -69,9 +102,8 @@ function cartao()
     if(valorPassagem.value == "outro")
     {
         let reais = document.getElementById('reais');
-        let centavos = document.getElementById('centavos');
-
-        let valorFinal = Number(reais.value) + (Number(centavos.value) / 100);
+        let centavos = document.getElementById('centavos'); //é necessario colocar duas casas
+        let valorFinal = Number(reais.value) + (Number(centavos.value) / 100); //faz o calculo baseado no valor inserido 
 
         gastoCartao = diasUteis * (valorFinal * usos.value);
         
@@ -90,9 +122,6 @@ function cartao()
         {
             res.innerHTML = `Campo de feriados incorreto`
         }
-
-
-    
     
 }
 
