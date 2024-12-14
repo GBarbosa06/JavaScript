@@ -83,7 +83,7 @@ function cartao()
              
     }
     gastoCartao = gastoCartao - Number(saldo)
-    res.innerHTML = `Você vai usar RS${gastoCartao.toFixed(2)} com transporte no mes ${mes+1}`  
+    res.innerHTML = `Você vai usar RS${gastoCartao.toFixed(2)} com transporte no mês ${mes+1}`  
 
 
     if(diasFeriado>28) //verificação se os dias de feriados passam de 28
