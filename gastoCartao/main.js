@@ -1,4 +1,4 @@
-window.alert('Atualização 1.3.0 !!! Melhoria de usabilidade');
+window.alert('Atualização 1.3.3 !!! Melhoria de usabilidade');
 
 
 function carregar()
