@@ -30,7 +30,7 @@
                 <p class="opcao">Para o proximo mês</p>
 
                     <p class="questao">Qual o saldo atual?</p> <!-- saldo atual -->
-                    <input type="number" name="saldo" id="saldo" style="width: 60px;" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
+                    <input type="number" name="saldo" id="saldo" style="width: 60px;" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()"> <!-- a qualquer edição do numero do usuário o resultado vai ser alterado -->
 
                     <p class="questao">Quantos feriados em dias úteis tem esse mês?</p>   <!-- feriados do mes -->              
                         <input type="number" name="feriados" id="feriados" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
@@ -55,9 +55,9 @@
                         <p class="opcao">Outro</p>
                         <div id="personalizado">
                             R$
-                            <input type="number" name="caixa" id="reais" class="caixa">
+                            <input type="number" name="caixa" id="reais" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
                             ,
-                            <input type="number" name="caixa" id="centavos" class="caixa">
+                            <input type="number" name="caixa" id="centavos" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
                         </div>
                     
                     <p class="questao">Quantos usos diários?</p> 

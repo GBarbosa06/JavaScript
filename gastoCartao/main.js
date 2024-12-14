@@ -115,7 +115,15 @@ function cartao()
              
     }
     gastoCartao = gastoCartao - Number(saldo)
-    res.innerHTML = `Você vai usar RS${gastoCartao.toFixed(2)} com transporte no mês ${mes+1}`  
+    if(gastoCartao > 0)
+    {
+        res.innerHTML = `Você vai precisar gastar RS${gastoCartao.toFixed(2)} com o cartão no mês ${mes+1}`
+    }
+    else
+    {
+        res.innerHTML = `Não é necessário recarregar o cartão`
+    }
+      
 
 
     if(diasFeriado>28) //verificação se os dias de feriados passam de 28
