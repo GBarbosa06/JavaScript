@@ -1,7 +1,7 @@
 <h1>Documentação do site</h1>
   <h2>Propósito:</h2>
     <p>Esse site foi criado com o intuito de facilitar o uso do cartão de transportes públicos, sendo usado para facilitar o cálculo que deve ser feito para estimar o gasto durante o mês (atual ou o próximo)</p>
-    <p style="font-size:.8em;">Aperte <a href="https://gbarbosa06.github.io/JavaScript/gastoCartao/" target="_blank">aqui</a> para abrir</p>
+    <p style="font-size:0.8em;">Aperte <a href="https://gbarbosa06.github.io/JavaScript/gastoCartao/" target="_blank">aqui</a> para abrir</p>
   <h2>Como usar: </h2>
     <p>Como sempre tento fazer de maneira intuitiva, o site tem uma usabilidade simples: </p>
     <p>
