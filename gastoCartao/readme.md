@@ -15,11 +15,10 @@
       </ol>
     </p>
 
-  <h2>Informações importântes: </h2>
+  <h2>Informações importantes: </h2>
     <p>
       <ul>
         <li>As caixas de texto não são obrigatórias para o funcionamento, caso queira acelerar as coisas, apenas aperte nas bolinhas (input do tipo radio) que vai funcionar normalmente</li>
         <li>Em todas as situações, sábados e domingos são retirados do cálculo, feriados e/ou dias de semana que queira desconsiderar do cálculo tem que ser adicionados manualmente.</li>
-        <li> </li>
       </ul>
     </p>
