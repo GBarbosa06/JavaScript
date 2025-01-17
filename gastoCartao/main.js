@@ -1,6 +1,3 @@
-window.alert('Atualização 1.3.3 !!! Melhoria de usabilidade');
-
-
 function carregar()
 {
     let boasVindas = window.document.getElementById('recepcao')
