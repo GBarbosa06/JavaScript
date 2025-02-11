@@ -21,10 +21,6 @@ function carregar()
     }
     
 }
-diasUteis()
-{
-    
-}
 
 function cartao()
 {
@@ -129,6 +125,11 @@ function cartao()
         }
     
 }
+
+const optionsEl = document.querySelectorAll('input');
+optionsEl.forEach(input => {
+    input.addEventListener('change', cartao);
+});
 
 
 

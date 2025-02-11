@@ -23,30 +23,30 @@
             
             <form id="informacoes">
 
-                <input type="radio" name="escolhaMes" value="esse" onclick="cartao()">
+                <input type="radio" name="escolhaMes" value="esse">
                 <p class="opcao">Para esse mês</p>
                 <br class="divisorMobile">
-                <input type="radio" name="escolhaMes" value="proximo" onclick="cartao()">
+                <input type="radio" name="escolhaMes" value="proximo">
                 <p class="opcao">Para o proximo mês</p>
 
                     <p class="questao">Qual o saldo atual?</p> <!-- saldo atual -->
-                    <input type="number" name="saldo" id="saldo" style="width: 60px;" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()"> <!-- a qualquer edição do numero do usuário o resultado vai ser alterado -->
+                    <input type="number" name="saldo" id="saldo" style="width: 60px;"> <!-- a qualquer edição do numero do usuário o resultado vai ser alterado -->
 
                     <p class="questao">Quantos feriados em dias úteis tem esse mês?</p>   <!-- feriados do mes -->              
-                        <input type="number" name="feriados" id="feriados" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
+                        <input type="number" name="feriados" id="feriados" class="caixa">
 
                     <p class="questao">Quer adicionar dias úteis no cálculo?</p>
-                        <input type="number" name="adicaoDias" id="adicaoDias" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
+                        <input type="number" name="adicaoDias" id="adicaoDias" class="caixa">
 
                     <p class="questao">Qual o valor da passagem?</p> <!-- escolha de valores -->
-                        <input type="radio" name="passagem" value="2.7" onclick="cartao()">
+                        <input type="radio" name="passagem" value="2.7">
                         <p class="opcao">R$2,70</p>
-                        <input type="radio" name="passagem" value="3.8" onclick="cartao()">
+                        <input type="radio" name="passagem" value="3.8">
                         <p class="opcao">R$3,80</p>
                         <br class="divisorMobile"> <!-- break apenas para o mobile -->
-                        <input type="radio" name="passagem" value="5.5" onclick="cartao()">
+                        <input type="radio" name="passagem" value="5.5">
                         <p class="opcao">R$5,50</p>                    
-                        <input type="radio" name="passagem" value="7.6" onclick="cartao()">
+                        <input type="radio" name="passagem" value="7.6">
                         <p class="opcao">R$7,60</p>
 
                         <br>
@@ -55,19 +55,19 @@
                         <p class="opcao">Outro</p>
                         <div id="personalizado">
                             R$
-                            <input type="number" name="caixa" id="reais" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
+                            <input type="number" name="caixa" id="reais" class="caixa">
                             ,
-                            <input type="number" name="caixa" id="centavos" class="caixa" onkeydown="cartao()" onkeyup="cartao()" onclick="cartao()">
+                            <input type="number" name="caixa" id="centavos" class="caixa">
                         </div>
                     
                     <p class="questao">Quantos usos diários?</p> 
-                        <input type="radio" name="usos" value="1" onclick="cartao()">
+                        <input type="radio" name="usos" value="1">
                         <p class="opcao">1</p>
-                        <input type="radio" name="usos" value="2" onclick="cartao()">
+                        <input type="radio" name="usos" value="2">
                         <p class="opcao">2</p>
-                        <input type="radio" name="usos" value="3" onclick="cartao()">
+                        <input type="radio" name="usos" value="3">
                         <p class="opcao">3</p>
-                        <input type="radio" name="usos" value="4" onclick="cartao()">
+                        <input type="radio" name="usos" value="4">
                         <p class="opcao">4</p>
                     
                     
